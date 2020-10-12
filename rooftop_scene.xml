@@ -9,7 +9,7 @@
 
   <asset>
     <texture name="skybox" type="skybox" builtin="gradient" rgb1=".08 .09 .10" rgb2="0 0 0" width="800" height="800" mark="random" markrgb=".8 .8 .8"/>
-    <texture name="texplane" type="2d" height="1" width="1" file="../scene_sim/textures/stone.png"/>
+    <texture name="texplane" type="2d" height="1" width="1" file="../scene_sim/textures/white_marble_tile2.png"/>
     <texture name="texbrick" type="2d" height="1" width="1" file="../scene_sim/textures/high_contrast_brick.png"/>
     <material name="MatPlane" reflectance="0.01" texture="texplane" texrepeat="4 4" texuniform="true"/>
     <material name="MatBrick" reflectance="0" texture="texbrick" texrepeat="1 2" texuniform="false"/>
