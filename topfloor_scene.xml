@@ -16,6 +16,7 @@
 
     <mesh name="wall" file="../scene_sim/meshes/highwindow.stl" scale="1 1 1"/>
     <mesh name="skyline" file="../scene_sim/meshes/skyline.stl" scale="1 1 1"/>
+    <mesh name="robohive" file="../scene_sim/meshes/robohive.stl"/>
   </asset>
 
   <compiler angle="radian"/>
@@ -35,14 +36,15 @@
 
   <worldbody>
     <!-- indoor lights -->
-    <light directional="false" diffuse=".5 .5 .55" specular="0.3 0.3 0.6" pos="-4 -4 7" dir="1 1 -1"/>
-    <light directional="false" diffuse=".5 .5 .55" specular="0.3 0.3 0.6" pos="4 -4 7" dir="-1 1 -1"/>
-    <light directional="false" diffuse=".5 .5 .55" specular="0.3 0.3 0.6" pos="0 4 7" dir="0 -1 -1"/>
+    <light directional="false" diffuse=".3 .3 .32" specular="0.3 0.3 0.6" pos="-4 -4 7" dir="1 1 -1"/>
+    <light directional="false" diffuse=".3 .3 .32" specular="0.3 0.3 0.6" pos="4 -4 7" dir="-1 1 -1"/>
+    <light directional="false" diffuse=".3 .3 .32" specular="0.3 0.3 0.6" pos="0 4 7" dir="0 -1 -1"/>
 
     <!-- floor, roof and outside -->
     <geom class='scene' name="skyline" mesh="skyline" pos="0 0 -5" type="mesh" rgba=".3 .3 .27 1"/>
     <geom class='scene' name="floor" pos="0 0 0.0001" size="6.5 6.5 .1" conaffinity="1" contype="1" type="plane" material="MatPlane" condim="3"/>
     <geom class='scene' name="roof" type="box" pos="0 0 8" size="6 6 .2" material="MatMetal"/>
+    <geom name="robohive" type="mesh" mesh="robohive" conaffinity="0" contype="0" rgba=".3 .3 .3 1"/>
 
     <!-- walls -->
     <geom class='scene' mesh="wall" pos="0 5 0" type="mesh" material="MatMetal"/>

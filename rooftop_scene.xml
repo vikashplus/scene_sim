@@ -15,6 +15,7 @@
     <material name="MatBrick" reflectance="0" texture="texbrick" texrepeat="1 2" texuniform="false"/>
     <mesh file="../scene_sim/meshes/wall.stl" scale="0.002 0.002 0.0002"/>
     <mesh file="../scene_sim/meshes/skyline.stl" scale="2 2 1"/>
+    <mesh name="robohive" file="../scene_sim/meshes/robohive.stl"/>
   </asset>
 
   <compiler angle="radian"/>
@@ -41,6 +42,7 @@
     <!-- floor and outside -->
     <geom class='scene' name="floor" pos="0 0 0.0001" size="10 10 .1" conaffinity="1" contype="1" type="plane" material="MatPlane" condim="3"/>
     <geom class='scene' name="skyline" mesh="skyline" pos="0 0 -5" type="mesh" rgba=".4 .4 .4 1" material="MatBrick"/>
+    <geom name="robohive" type="mesh" mesh="robohive" conaffinity="0" contype="0" rgba=".3 .3 .3 1"/>
 
     <!-- walls -->
     <geom class='scene' mesh="wall" pos="0 10 0" type="mesh" material="MatBrick"/>
