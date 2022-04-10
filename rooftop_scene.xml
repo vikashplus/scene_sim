@@ -8,11 +8,16 @@
 ====================================================== -->
 
   <asset>
-    <texture name="skybox" type="skybox" builtin="gradient" rgb1=".08 .09 .10" rgb2="0 0 0" width="800" height="800" mark="random" markrgb=".8 .8 .8"/>
+    <!-- <texture name="skybox" type="skybox" builtin="gradient" rgb1=".08 .09 .10" rgb2="0 0 0" width="800" height="800" mark="random" markrgb=".8 .8 .8"/> -->
+    <texture name="skybox" type="skybox" gridsize="3 4" gridlayout=".U..LFRB.D.." file="../scene_sim/textures/stormy.png"/>
     <texture name="texplane" type="2d" height="1" width="1" file="../scene_sim/textures/white_marble_tile2.png"/>
     <texture name="texbrick" type="2d" height="1" width="1" file="../scene_sim/textures/high_contrast_brick.png"/>
+    <texture name="texwindow" type="2d" height="1" width="1" file="../scene_sim/textures/windows0.png"/>
+
     <material name="MatPlane" reflectance="0.01" texture="texplane" texrepeat="4 4" texuniform="true"/>
     <material name="MatBrick" reflectance="0" texture="texbrick" texrepeat="1 2" texuniform="false"/>
+    <material name="MatWindow" reflectance="0" texture="texwindow" texrepeat="1 1" texuniform="true" rgba="1 0 0 1"/>
+
     <mesh file="../scene_sim/meshes/wall.stl" scale="0.002 0.002 0.0002"/>
     <mesh file="../scene_sim/meshes/skyline.stl" scale="2 2 1"/>
     <mesh name="robohive" file="../scene_sim/meshes/robohive.stl"/>
@@ -35,20 +40,24 @@
 
   <worldbody>
     <!-- indoor lights -->
-    <light directional="false" diffuse=".4 .4 .45" specular="0.3 0.3 0.6" pos="-10 -10 10" dir="1 1 -1"/>
-    <light directional="false" diffuse=".4 .4 .45" specular="0.3 0.3 0.6" pos="10 -10 10" dir="-1 1 -1"/>
-    <light directional="false" diffuse=".4 .4 .45" specular="0.3 0.3 0.6" pos="0 10 10" dir="0 -1 -1"/>
+    <light directional="false" diffuse=".5 .45 .4" specular="0.3 0.3 0.6" pos="-10 -10 10" dir="1 1 -1"/>
+    <light directional="false" diffuse=".5 .45 .4" specular="0.3 0.3 0.6" pos="10 -10 10" dir="-1 1 -1"/>
+    <light directional="false" diffuse=".5 .45 .4" specular="0.3 0.3 0.6" pos="0 10 10" dir="0 -1 -1"/>
 
     <!-- floor and outside -->
     <geom class='scene' name="floor" pos="0 0 0.0001" size="10 10 .1" conaffinity="1" contype="1" type="plane" material="MatPlane" condim="3"/>
-    <geom class='scene' name="skyline" mesh="skyline" pos="0 0 -5" type="mesh" rgba=".4 .4 .4 1" material="MatBrick"/>
+    <geom class='scene' name="skyline" mesh="skyline" pos="0 0 -5" type="mesh" rgba=".4 .4 .4 1" material="MatWindow"/>
     <geom name="robohive" type="mesh" mesh="robohive" conaffinity="0" contype="0" rgba=".3 .3 .3 1"/>
 
     <!-- walls -->
     <geom class='scene' mesh="wall" pos="0 10 0" type="mesh" material="MatBrick"/>
+    <geom type="mesh" mesh="robohive" conaffinity="0" contype="0" rgba=".3 .3 .3 1" pos="0 10 .95" euler="1.57 0 0"/>
     <geom class='scene' mesh="wall" pos="0 -10 0" type="mesh" material="MatBrick" euler="0 0 -3.14"/>
+    <geom type="mesh" mesh="robohive" conaffinity="0" contype="0" rgba=".3 .3 .3 1" pos="0 -10 .95" euler="1.57 3.14 0"/>
     <geom class='scene' mesh="wall" pos="10 0 0" type="mesh" material="MatBrick" euler="0 0 -1.57"/>
+    <geom type="mesh" mesh="robohive" conaffinity="0" contype="0" rgba=".3 .3 .3 1" pos="10 0 .95" euler="1.57 -1.57 0"/>
     <geom class='scene' mesh="wall" pos="-10 0 0" type="mesh" material="MatBrick" euler="0 0 1.57"/>
+    <geom type="mesh" mesh="robohive" conaffinity="0" contype="0" rgba=".3 .3 .3 1" pos="-10 0 .95" euler="1.57 1.57 0"/>
 
     <!-- co-ordinate axis -->
     <site name="xaxis" fromto="0 0 0 1 0 0" size=".005" type="capsule" rgba="1 0 0 .25" group="3"/>
