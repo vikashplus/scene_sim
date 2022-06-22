@@ -39,9 +39,9 @@
 
   <worldbody>
     <!-- indoor lights -->
-    <light directional="false" diffuse=".4 .35 .3" specular="0.4 0.35 0.3" pos="-4 -4 7" dir="1 1 -1"/>
-    <light directional="false" diffuse=".4 .35 .3" specular="0.4 0.35 0.3" pos="4 -4 7" dir="-1 1 -1"/>
-    <light directional="false" diffuse=".4 .35 .3" specular="0.4 0.35 0.3" pos="0 4 7" dir="0 -1 -1"/>
+    <light name="left_light" directional="false" diffuse=".4 .35 .3" specular="0.4 0.35 0.3" pos="-4 -4 7" dir="1 1 -1"/>
+    <light name="right_light" directional="false" diffuse=".4 .35 .3" specular="0.4 0.35 0.3" pos="4 -4 7" dir="-1 1 -1"/>
+    <light name="front_light" directional="false" diffuse=".4 .35 .3" specular="0.4 0.35 0.3" pos="0 4 7" dir="0 -1 -1"/>
 
     <!-- floor, roof and outside -->
     <geom class='scene' name="skyline" mesh="skyline" pos="0 0 -3" type="mesh" rgba=".3 .3 .27 1" euler="0 0 0" material="MatWindow"/>
