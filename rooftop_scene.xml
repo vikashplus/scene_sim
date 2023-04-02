@@ -22,7 +22,6 @@
     <mesh file="../scene_sim/meshes/skyline.stl" scale="2 2 1"/>
     <mesh name="robohive" file="../scene_sim/meshes/robohive.stl"/>
         <mesh name="robohive_half" file="../scene_sim/meshes/robohive_half.stl" scale="4 4 4"/>
-
   </asset>
 
   <compiler angle="radian"/>
