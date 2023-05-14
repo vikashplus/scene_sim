@@ -20,8 +20,8 @@
 
     <mesh file="../scene_sim/meshes/wall.stl" scale="0.002 0.002 0.0002"/>
     <mesh file="../scene_sim/meshes/skyline.stl" scale="2 2 1"/>
-    <mesh name="robohive" file="../scene_sim/meshes/robohive.stl"/>
-        <mesh name="robohive_half" file="../scene_sim/meshes/robohive_half.stl" scale="4 4 4"/>
+    <mesh name="robohive" file="../scene_sim/meshes/robohive_text.stl"/>
+        <mesh name="robohive_half" file="../scene_sim/meshes/robohive_logohalf.stl" scale="4 4 4"/>
   </asset>
 
   <compiler angle="radian"/>

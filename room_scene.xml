@@ -11,8 +11,8 @@
     <texture name="texplane" type="2d" height="1" width="1" file="../scene_sim/textures/oak_floorboard.png"/>
     <material name="MatPlane" reflectance="0.01" texture="texplane" texrepeat="4 4" texuniform="true"/>
     <mesh name="room" file="../scene_sim/meshes/simpleroom1.stl" scale="1 1 1"/>
-    <mesh name="robohive" file="../scene_sim/meshes/robohive.stl" scale="1 1 1"/>
-    <mesh name="robohive_half" file="../scene_sim/meshes/robohive_half.stl" scale="4 4 4"/>
+    <mesh name="robohive" file="../scene_sim/meshes/robohive_text.stl" scale="1 1 1"/>
+    <mesh name="robohive_half" file="../scene_sim/meshes/robohive_logohalf.stl" scale="4 4 4"/>
   </asset>
 
   <compiler angle="radian"/>
@@ -48,7 +48,7 @@
           <geom pos="0 -.45 0" name="robohive" type="mesh" mesh="robohive" rgba=".6 .6 .6 1"/>
       </body>
 
-      <geom pos="0 0 1" size=".2 .2 .01" type="box"/>
+      <!-- <geom pos="0 0 1" size=".2 .2 .01" type="box"/> -->
       <!-- co-ordinate axis -->
       <site name="xaxis" fromto="0 0 0 1 0 0" size=".005" type="capsule" rgba="1 0 0 .25" group="3"/>
       <site name="yaxis" fromto="0 0 0 0 1 0" size=".005" type="capsule" rgba="0 1 0 .25" group="3"/>
